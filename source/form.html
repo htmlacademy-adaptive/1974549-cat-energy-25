@@ -30,81 +30,81 @@
   </header>
   <main class="main-container">
     <section class="form">
-      <div class="form-wrapper">
-        <h2 class="form__title">Подбор программы</h2>
+      <div class="form__wrapper">
+        <h1 class="form__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету, и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
-        <form class="form-content" action="https://echo.htmlacademy.ru" method="post">
-          <ul>
-            <li class="form__fild">
-              <label class="form__label" for="name">Имя*</label>
-              <input class="form__input" type="text" id="name" name="nickname" placeholder="Барсик">
-            </li>
-            <li class="form__fild">
-              <label class="form__label" for="weight">Вес (кг):*</label>
-              <input class="form__input" type="number" id="weight" name="weight" placeholder="7">
-            </li>
-            <li class="form__fild">
-              <label class="form__label" for="age">Возраст (лет):</label>
-              <input class="form__input" type="number" id="age" name="age" placeholder="7">
-            </li>
-            <li class="form__radio">
-              <input class="form__input" type="radio" id="weight-loss" name="program-type" checked>
-              <label class="" for="weight-loss">похудение</label>
-            </li>
-            <li class="form__radio">
-              <input class="form__input" type="radio" id="set" name="program-type">
-              <label class="form__label" for="set">Набор массы</label>
-            </li>
-            <li class="form__radio">
-              <input class="form__input" type="radio" id="advice" name="program-type">
-              <label class="form__label" for="advice">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-          <h3 class="contact-title">Контактные данные (владельца кота)</h3>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__label" for="user-email">E-mail:*</label>
-              <input class="form__field" placeholder="kuklachev@gmail.com" type="email" name="contact-email"
-                id="user-email">
-            </li>
-            <li class="form__item">
-              <label class="form__label" for="user-mobile">Телефон:*</label>
-              <input class="form__field" placeholder="8 (960) 900-60-90" type="number" name="contact-mobile"
-                id="user-mobile">
-            </li>
-          </ul>
-          <h3 class="form__title">Комментарий</h3>
-          <textarea class="form__comment" name="comment" id="comment"
-            rows="8">Расскажите обо всех повадках кота</textarea>
-          <h3 class="form__title">Дополнительно</h3>
-          <ul class="form__list">
-            <li class="form__item">
-              <input class="form__input" type="checkbox" id="sweetener" name="product-type" checked>
-              <label class="form__label" for="sweetener">сахарозаменитель</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input" type="checkbox" id="water" name="product-type">
-              <label class="form__label" for="water">питьевая вода</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input" type="checkbox" id="milk" name="product-type">
-              <label class="form__label" for="milk">молоко</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input" type="checkbox" id="vitamins" name="product-type">
-              <label class="form__label" for="vitamins">витамины</label>
-            </li>
-          </ul>
-          <div class="form__button">
-            <button class="form__button-submit" type="submit">отправить заявку</button>
-            <p>* — Обязательные поля</p>
-          </div>
-        </form>
       </div>
+      <form class="form__content" action="https://echo.htmlacademy.ru" method="post">
+        <ul>
+          <li class="form__fild">
+            <label class="form__label" for="name">Имя*</label>
+            <input class="form__input" type="text" id="name" name="nickname" placeholder="Барсик">
+          </li>
+          <li class="form__fild">
+            <label class="form__label" for="weight">Вес (кг):*</label>
+            <input class="form__input" type="number" id="weight" name="weight" placeholder="7">
+          </li>
+          <li class="form__fild">
+            <label class="form__label" for="age">Возраст (лет):</label>
+            <input class="form__input" type="number" id="age" name="age" placeholder="7">
+          </li>
+          <li class="form__radio">
+            <input class="form__input" type="radio" id="weight-loss" name="program-type" checked>
+            <label class="" for="weight-loss">похудение</label>
+          </li>
+          <li class="form__radio">
+            <input class="form__input" type="radio" id="set" name="program-type">
+            <label class="form__label" for="set">Набор массы</label>
+          </li>
+          <li class="form__radio">
+            <input class="form__input" type="radio" id="advice" name="program-type">
+            <label class="form__label" for="advice">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+        <h2 class="contact__title">Контактные данные (владельца кота)</h2>
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__label" for="user-email">E-mail:*</label>
+            <input class="form__field" placeholder="kuklachev@gmail.com" type="email" name="contact-email"
+              id="user-email">
+          </li>
+          <li class="form__item">
+            <label class="form__label" for="user-mobile">Телефон:*</label>
+            <input class="form__field" placeholder="8 (960) 900-60-90" type="number" name="contact-mobile"
+              id="user-mobile">
+          </li>
+        </ul>
+        <h3 class="form__title">Комментарий</h3>
+        <textarea class="form__comment" name="comment" id="comment"
+          rows="8">Расскажите обо всех повадках кота</textarea>
+        <h3 class="form__title">Дополнительно</h3>
+        <ul class="form__list">
+          <li class="form__item">
+            <input class="form__input" type="checkbox" id="sweetener" name="product-type" checked>
+            <label class="form__label" for="sweetener">сахарозаменитель</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input" type="checkbox" id="water" name="product-type">
+            <label class="form__label" for="water">питьевая вода</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input" type="checkbox" id="milk" name="product-type">
+            <label class="form__label" for="milk">молоко</label>
+          </li>
+          <li class="form__item">
+            <input class="form__input" type="checkbox" id="vitamins" name="product-type">
+            <label class="form__label" for="vitamins">витамины</label>
+          </li>
+        </ul>
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">отправить заявку</button>
+          <p class="">* — Обязательные поля</p>
+        </div>
+      </form>
     </section>
     <div class="location">
       <b class="location__text">приглашаем к&nbsp;сотрудничеству дилеров!</b>
-      <p class="location__desc">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <address class="location__desc">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
     </div>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
