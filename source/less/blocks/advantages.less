@@ -10,7 +10,6 @@
 }
 
 .advantages__subtitle {
-  font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -18,7 +17,6 @@
 }
 
 .advantages__description {
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-grey;
@@ -26,10 +24,18 @@
 
 .advantages__link {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
   color: @color-black;
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    width: 1220px;
+    gap: 80px;
+  }
 }

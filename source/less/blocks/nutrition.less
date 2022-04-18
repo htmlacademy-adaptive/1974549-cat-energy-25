@@ -4,16 +4,34 @@
 }
 
 .nutrition__title {
-  font-weight: 400;
-  font-size: 32px;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
   line-height: 36px;
   margin: 0 auto;
   text-align: center;
 }
 
 .nutrition__slogan {
-  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .nutrition__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .nutrition {
+    width: 709px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nutrition {
+    width: 1220px;
+  }
 }
