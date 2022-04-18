@@ -12,7 +12,31 @@
   text-transform: uppercase;
   color: @color-black;
   text-decoration: none;
-  padding: 22px 70px 24px 70px;
+  padding: 22px 50px 24px 50px;
   display: block;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__link {
+    padding: 12px 17px 12px 17px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
 }

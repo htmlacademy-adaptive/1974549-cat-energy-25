@@ -1,10 +1,10 @@
 .example__wrapper {
   background: @color-background;
+  padding: 0 20px;
 }
 
 .example__title {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
@@ -12,7 +12,6 @@
 }
 
 .example__text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-grey;
@@ -20,7 +19,6 @@
 
 .example__info {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
@@ -29,10 +27,84 @@
 
 .example__waste {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: @color-black;
+  margin: 0;
+}
+
+.example__flex {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.example__text--mod {
+  width: 77px;
+}
+
+.example__desc {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__info {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__waste {
+    text-align: end;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__flex {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__desc {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__text--mod {
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    padding: 0 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__flex {
+    width: 366px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__desc {
+    width: 350px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
