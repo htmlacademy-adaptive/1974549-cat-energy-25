@@ -21,13 +21,30 @@
   color: @color-grey-2;
 }
 
+.additionally__gift {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .additionally__product {
   display: flex;
   flex-direction: column;
 }
 
-.additionally__info {
+.additionally__item,
+.additionally__price {
   font-size: 14px;
   line-height: 14px;
   color: @color-dark-grey;
+}
+
+@media (min-width: @desktop-width) {
+  .additionally__product {
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px;
+  }
+
+  .additionally__wrapper {
+    display: flex;
+  }
 }

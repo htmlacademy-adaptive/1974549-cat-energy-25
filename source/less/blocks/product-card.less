@@ -7,7 +7,7 @@
   margin-bottom: 49px;
 }
 
-.product__subtitle {
+.product-card__subtitle {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -16,12 +16,30 @@
   color: @color-grey-2;
 }
 
-.product__list {
+.product-card__list {
   list-style-type: none;
 }
 
-.product__info {
+.product-card__info {
   font-size: 12px;
   line-height: 16px;
   color: @color-dark-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    gap: 160px 60px;
+    justify-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+    gap: 145px 80px;
+    justify-items: center;
+  }
 }

@@ -16,7 +16,7 @@
 
 .form__list {
   list-style: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -43,6 +43,15 @@
   color: @color-dark-grey;
 }
 
+.form__fields {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @color-dark-grey;
+  flex-grow: 1;
+}
+
 .form__info {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -50,4 +59,52 @@
   align-items: center;
   text-transform: uppercase;
   color: @color-black;
+}
+
+.form__fill {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.form__fild {
+  display: flex;
+}
+
+.form__item {
+  display: flex;
+}
+
+.form__field--mobile,
+.form__field--email {
+  flex-grow: 1;
+}
+
+.form__field--comment {
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form__button {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__inner {
+    display: grid;
+    grid-template-columns: 640px 568px;
+    gap: 80px;
+  }
+
+  .form__list--additionally {
+    display: flex;
+  }
+
+  .form__list--email {
+    display: grid;
+    grid-template-columns: 560px 560px;
+  }
 }
