@@ -1,4 +1,4 @@
-.main-header {
+.header {
   display: flex;
   flex-direction: column;
   color: @color-black;
@@ -6,7 +6,7 @@
   padding: 0 20px;
 }
 
-.main-header__logo {
+.header__logo {
   display: flex;
   align-items: center;
   min-height: 65px;
@@ -15,16 +15,25 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-header {
+  .header {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 30px;
     align-items: center;
   }
+
+  .header__logo {
+    width: 174px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .main-header {
+  .header {
     padding: 0 110px;
+    padding-top: 50px;
+  }
+
+  .header__logo {
+    width: 202px;
   }
 }

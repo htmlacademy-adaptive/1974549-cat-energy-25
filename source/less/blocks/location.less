@@ -8,6 +8,8 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @color-light-black;
+  margin: 0;
+  padding: 26px 0;
 }
 
 .location__link {
@@ -24,18 +26,24 @@
   align-items: center;
 }
 
+.location__iframe {
+  border: none;
+  display: block;
+}
+
 @media (min-width: @tablet-width) {
   .location__inner {
-    padding: 0 30px;
+    padding: 0 70px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background: @color-grey;
+    background: @color-white;
   }
 
   .location__text {
     width: 171px;
+    padding: 56px 0;
   }
 
   .location__link {
@@ -43,17 +51,19 @@
     text-align: center;
   }
 
-  iframe {
+  .location__iframe {
     width: 768px;
+    height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  iframe {
+  .location__iframe {
     width: 1440px;
   }
 
   .location__inner {
+    padding: 0 80px;
     position: absolute;
     top: 176px;
     left: 41px;

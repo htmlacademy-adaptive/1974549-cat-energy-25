@@ -1,3 +1,7 @@
+.nutrition__wrapper {
+  margin-bottom: 30px;
+}
+
 .nutrition {
   width: 280px;
   margin: 0 auto;
@@ -5,22 +9,58 @@
 
 .nutrition__title {
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 25px;
 }
 
 .nutrition__slogan {
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.nutrition__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 73px;
+  background: @color-green;
+  color: @color-white;
 }
 
 @media (min-width: @tablet-width) {
+  .nutrition__wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 450px;
+    flex-direction: column;
+    margin-left: 90px;
+  }
+
+  .nutrition__slogan {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   .nutrition__title {
     font-size: 60px;
     line-height: 60px;
+    text-align: left;
+  }
+
+  .nutrition__link {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
   }
 
   .nutrition {

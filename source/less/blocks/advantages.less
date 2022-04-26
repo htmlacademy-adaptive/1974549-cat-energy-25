@@ -7,19 +7,40 @@
 
 .advantages__item {
   background: @color-grey;
+  margin-bottom: 20px;
 }
 
 .advantages__subtitle {
+  font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 30px 0;
 }
 
 .advantages__description {
+  position: relative;
+  display: inline-block;
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-grey;
+  margin: 0;
+  width: 243px;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 38px;
+}
+
+.advantages__description::after {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  left: 2px;
+  height: 1px;
+  background-color: @color-grey-3;
+  content: "";
 }
 
 .advantages__link {
@@ -29,6 +50,47 @@
   text-align: center;
   text-transform: uppercase;
   color: @color-black;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 19px;
+  padding-bottom: 18px;
+}
+
+.advantages__link::after {
+  content: url("../img/arrow.svg");
+  padding-left: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__item {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 52px;
+  }
+
+  .advantages__subtitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .advantages__link {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 0;
+  }
+
+  .advantages__description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 300px;
+  }
+
+  .advantages__description::after {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -37,5 +99,20 @@
     grid-template-columns: 570px 570px;
     width: 1220px;
     gap: 80px;
+  }
+
+  .advantages__description {
+    width: 470px;
+  }
+
+  .advantages__item {
+    margin-bottom: 72px;
+    display: inline;
+    padding: 35px 52px;
+  }
+
+  .advantages__subtitle {
+    padding-top: 20px;
+    padding-bottom: 73px;
   }
 }
