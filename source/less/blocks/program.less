@@ -7,7 +7,6 @@
 .program__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
@@ -15,7 +14,6 @@
 }
 
 .program__text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-grey;
@@ -28,4 +26,26 @@
 
 .program__desc:nth-last-child(1) {
   margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .program__enumeration {
+    display: grid;
+    grid-template-columns: 245px 245px;
+    gap: 37px 153px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program__desc {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program__enumeration {
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px;
+    gap: 80px;
+  }
 }
