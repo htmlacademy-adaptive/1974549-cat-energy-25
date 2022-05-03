@@ -89,6 +89,7 @@
               </svg>
               <p class="program__text">Функциональное питание содержит только полезные питательные
                 вещества.</p>
+                <span class="program__number">1</span>
             </li>
             <li class="program__desc program__desc--useful">
               <svg width="61" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,6 +115,7 @@
               </svg>
               <p class="program__text">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком
                 и&nbsp;готово.</p>
+                <span class="program__number">2</span>
             </li>
             <li class="program__desc program__desc--useful">
               <svg width="61" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,6 +130,7 @@
                   d="M29 15a1 1 0 0 0-1 1v5.5c0 .56-.2 1.32-.7 1.92-.48.56-1.31 1.08-2.8 1.08a1 1 0 0 0 0 2c2.01 0 3.43-.73 4.33-1.8A5.07 5.07 0 0 0 30 21.5V16a1 1 0 0 0-1-1Z"
                   fill="#fff" /></svg>
               <p class="program__text">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</p>
+              <span class="program__number">3</span>
             </li>
             <li class="program__desc program__desc--useful">
               <svg width="61" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,6 +153,7 @@
                 <rect x="22.5" y="15" width="15.5" height="1.5" rx=".75" fill="#fff" />
               </svg>
               <p class="program__text">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!</p>
+              <span class="program__number">4</span>
             </li>
           </ol>
         </div>
@@ -158,10 +162,11 @@
     <section class="example">
       <div class="example__wrapper">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__text example__text--more">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм
+        <p class="example__text example__text--more">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой
+          обычный корм
           на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих
           привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
-        <div class="example__container">
+        <!-- <div class="example__container">
             <div class="example__inner">
               <span class="example__info">5кг</span>
               <p class="example__text example__text--mod">снижение веса</p>
@@ -170,6 +175,24 @@
               <span class="example__info">60 дней</span>
               <p class="example__text example__text--mod">затрачено времени</p>
             </div>
+          <div class="example__desc">
+            <p class="example__waste">Затраты на питание:</p>
+            <span class="example__waste example__waste--price">15 000 РУБ.</span>
+          </div>
+        </div> -->
+        <div class="example__fieldset-wrapper">
+          <fieldset class="example__fieldset">
+            <span class="example__info">5кг</span>
+            <legend>
+              <p class="example__text example__text--mod example__text--newmod">снижение веса</p>
+            </legend>
+          </fieldset>
+          <fieldset class="example__fieldset">
+            <span class="example__info">60 дней</span>
+            <legend>
+              <p class="example__text example__text--mod">затрачено времени</p>
+            </legend>
+          </fieldset>
           <div class="example__desc">
             <p class="example__waste">Затраты на питание:</p>
             <span class="example__waste example__waste--price">15 000 РУБ.</span>
@@ -236,7 +259,7 @@
       </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

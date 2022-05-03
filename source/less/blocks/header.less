@@ -4,6 +4,16 @@
   color: @color-black;
   background-color: @color-white;
   padding: 0 20px;
+  position: relative;
+}
+
+.header::after {
+  position: absolute;
+  outline: 1px solid @color-background;
+  content: "";
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .header__logo {
@@ -20,6 +30,11 @@
     justify-content: space-between;
     padding: 0 30px;
     align-items: center;
+    padding-top: 30px;
+  }
+
+  .header::after {
+    display: none;
   }
 
   .header__logo {
