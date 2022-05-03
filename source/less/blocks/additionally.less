@@ -1,34 +1,113 @@
 .additionally__title {
+  position: relative;
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
   color: @color-black;
+  margin: 0;
+  padding: 25px 22px 36px 20px;
+  display: inline-block;
+  background-color: @color-white;
+}
+
+.additionally__line {
+  position: relative;
+}
+
+.additionally__line::before {
+  content: "";
+  position: absolute;
+  top: 46%;
+  height: 2px;
+  width: 100%;
+  background-color: @color-green;
+}
+
+.additionally__line-title {
+  width: 268px;
+}
+
+.additionally__wrapper {
+  padding: 0 20px;
 }
 
 .additionally__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.additionally__list::after {
+  position: absolute;
+  outline: 1px solid @color-background;
+  content: "";
+  right: 0;
+  left: 0;
+  top: 0;
 }
 
 .additionally__subtitle {
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   align-items: center;
   text-transform: uppercase;
   color: @color-grey-2;
+  margin: 0;
+  padding: 13px 0 13px;
+}
+
+.additionally__inner {
+  display: flex;
+  padding-bottom: 15px;
+  flex-direction: column;
+}
+
+.additionally__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additionally__butten {
+  margin-bottom: 19px;
+}
+
+.additionally__butten::after {
+  position: absolute;
+  outline: 1px solid @color-special-grey;
+  content: "";
+  right: 0;
+  left: 0;
+  top: 130px;
+}
+
+.additionally__info {
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  text-align: center;
+  background-color: @color-green;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
 }
 
 .additionally__gift {
-  font-size: 16px;
-  line-height: 20px;
+  background-image: url("../img/gift.svg");
+  height: 78px;
+  width: 80px;
+  background-repeat: no-repeat;
+  margin: 48px 0;
 }
 
 .additionally__product {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .additionally__item,
@@ -38,13 +117,140 @@
   color: @color-dark-grey;
 }
 
+.additionally__text {
+  margin: 0;
+  width: 161px;
+  color: @color-white;
+  margin-bottom: 43px;
+}
+
+@media (min-width: @tablet-width) {
+  .additionally__title {
+    margin-left: 30px;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 68px 36px 80px;
+  }
+
+  .additionally__line-title {
+    width: 441px;
+  }
+
+  .additionally__line::before {
+    top: 50%;
+  }
+
+  .additionally__item,
+  .additionally__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additionally__butten::after {
+    left: -38px;
+    width: 112%;
+  }
+
+  .additionally__list {
+    outline: 1px solid @color-special-grey;
+    margin-bottom: 69px;
+  }
+
+  .additionally__inner {
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 25px;
+  }
+
+  .additionally__flex {
+    width: 226px;
+  }
+
+  .additionally__subtitle {
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additionally__product {
+    margin: 0 38px 0 38px;
+  }
+
+  .additionally__info {
+    justify-content: space-around;
+    padding: 61px 0 61px;
+    flex-direction: row;
+  }
+
+  .additionally__text {
+    margin: 0;
+  }
+
+  .additionally__gift {
+    margin: 0;
+    margin-bottom: 46px;
+  }
+
+  .additionally__wrapper {
+    padding: 0 30px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .additionally__product {
-    display: grid;
-    grid-template-columns: 230px 230px 230px 230px;
+    justify-content: space-between;
+    flex-direction: initial;
+    margin: 0;
+    padding: 16px 0 16px;
   }
 
   .additionally__wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .additionally__inner {
+    width: 610px;
+    padding: 0;
+  }
+
+  .additionally__list {
+    width: 896px;
+    outline: none;
+  }
+
+  .additionally__flex {
+    width: 288px;
+  }
+
+  .additionally__butten {
+    padding: 10px 94px 10px;
+    margin-bottom: 0;
+  }
+
+  .additionally__butten::after {
+    left: 0;
+    width: 100%;
+    top: 75px;
+  }
+
+  .additionally__info {
+    width: 245px;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 54px 0 54px;
+  }
+
+  .additionally__title {
+    margin-left: 70px;
+    padding: 76px 40px 81px 35px;
+  }
+
+  .additionally__line-title {
+    width: 484px;
   }
 }
