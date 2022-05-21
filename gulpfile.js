@@ -79,6 +79,7 @@ const svg = () => {
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
+
 //Copy
 
 const copy = (done) => {
@@ -91,6 +92,7 @@ const copy = (done) => {
     .pipe(gulp.dest('build'))
   done();
 }
+
 // Clean
 
 const clean = () => {
@@ -110,12 +112,14 @@ const server = (done) => {
   });
   done();
 }
+
 // Reload
 
 const reload = (done) => {
   browser.reload();
   done();
 }
+
 // Watcher
 
 const watcher = () => {
@@ -123,6 +127,7 @@ const watcher = () => {
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
+
 // Build
 
 export const build = gulp.series(
@@ -137,6 +142,7 @@ export const build = gulp.series(
     createWebp
   ),
 );
+
 // Default
 
 export default gulp.series(
