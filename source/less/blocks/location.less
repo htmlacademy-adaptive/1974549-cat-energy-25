@@ -12,6 +12,7 @@
 }
 
 .location__link {
+  font-style: normal;
   font-size: 14px;
   line-height: 20px;
   color: @color-dark-grey;
@@ -21,9 +22,8 @@
 .location__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 20px;
+  padding: 26px 20px;
   align-items: center;
-  margin: 26px 0;
 }
 
 .location__inner--mod {
@@ -37,13 +37,12 @@
 
 @media (min-width: @tablet-width) {
   .location__inner {
-    padding: 0 70px;
+    padding: 60px 70px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background: @color-white;
-    margin: 56px 0;
   }
 
   .location__inner--mod {
@@ -58,9 +57,13 @@
 
   .location__link {
     width: 160px;
-    text-align: center;
+    text-align: right;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .location__link--mod {
+    margin-bottom: 17px;
   }
 
   .location__iframe {
@@ -75,10 +78,10 @@
   }
 
   .location__inner {
-    padding: 56px 80px;
+    padding: 60px 79px;
     position: absolute;
-    top: 176px;
-    left: 41px;
+    top: 95px;
+    left: 111px;
     background: @color-white;
     margin: 0;
     width: 565px;
@@ -87,5 +90,9 @@
   .location__text {
     font-size: 20px;
     line-height: 26px;
+  }
+
+  .location__link {
+    text-align: left;
   }
 }

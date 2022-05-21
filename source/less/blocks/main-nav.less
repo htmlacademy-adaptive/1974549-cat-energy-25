@@ -4,8 +4,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -62px;
-  right: -20px;
+  top: -56px;
+  right: -17px;
   z-index: 2;
   display: block;
   width: 65px;
@@ -70,6 +70,14 @@
   border-top: 1px solid @color-background;
 }
 
+.main-nav__link:hover {
+  opacity: 0.6;
+}
+
+.main-nav__link:active {
+  opacity: 0.3;
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__item {
     display: none;
@@ -95,16 +103,17 @@
 
   .main-nav__link--active::before {
     position: absolute;
-    right: 8px;
-    bottom: 3px;
-    left: 8px;
+    right: 19px;
+    bottom: 6px;
+    left: 17px;
     height: 2px;
     background-color: @color-green;
     content: "";
   }
 
   .main-nav__link {
-    padding: 12px 8px 12px 8px;
+    padding: 17px;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     border: none;
@@ -122,7 +131,26 @@
   }
 
   .main-nav__link {
+    padding: 17px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .main-nav__link--mod {
+    color: @color-white;
+  }
+
+  .main-nav__link--active::before {
+    right: 19px;
+    bottom: 7px;
+    left: 19px;
+  }
+
+  .main-nav__link--active-mod::before {
+    background-color: @color-white;
+  }
+
+  .main-nav {
+    z-index: 3;
   }
 }

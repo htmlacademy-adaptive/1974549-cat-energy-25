@@ -17,7 +17,7 @@
 .form__title--mod {
   font-size: 36px;
   line-height: 36px;
-  padding: 27px 0 37px;
+  padding: 30px 0 38px;
 }
 
 .form__title--padding {
@@ -69,7 +69,7 @@
 }
 
 .form__title--add {
-  padding-bottom: 34px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .form__radio {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .form__label {
@@ -122,15 +122,48 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @color-dark-grey;
-  padding: 12px;
+  padding: 13px;
   flex-grow: 1;
   border: 1px solid @color-light-grey;
+}
+
+.form__fild:hover {
+  outline: 1px solid @color-special-grey;
+}
+
+.form__fild:focus {
+  outline: 2px solid @color-dark-grey;
+}
+
+.form__fild:focus + .form__item-svg--fone {
+  fill: @color-green;
+}
+
+.form__fild:invalid,
+.form__item-svg:invalid {
+  outline: 2px solid @color-error;
+}
+
+.form__item-svg {
+  position: absolute;
+  right: 13px;
+  top: 16px;
+}
+
+.form__fild:focus + .form__item-svg--mod {
+  line {
+    stroke: @color-green;
+  }
+
+  path {
+    stroke: @color-green;
+  }
 }
 
 .form__label-button {
   position: relative;
   display: block;
-  padding-left: 42px;
+  padding-left: 46px;
 }
 
 .form__radio-mark {
@@ -145,10 +178,10 @@
   cursor: pointer;
 }
 
-.form__input[type="radio"]:checked+.form__radio-mark::before {
+.form__input[type="radio"]:checked + .form__radio-mark::before {
   position: absolute;
   top: 8px;
-  left: 8px;
+  left: 7px;
   width: 13px;
   height: 13px;
   background-color: @color-green;
@@ -156,38 +189,38 @@
   content: "";
 }
 
-.form__input[type="radio"]+.form__radio-mark {
+.form__input[type="radio"] + .form__radio-mark {
   border-radius: 50%;
 }
 
 .form__mark {
   position: absolute;
-  top: -4px;
+  top: -6px;
   left: 0;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   border: 1px solid @color-special-grey;
   cursor: pointer;
 }
 
-.form__input[type="checkbox"]:checked+.form__mark::after {
+.form__input[type="checkbox"]:checked + .form__mark::after {
   position: absolute;
-  left: -1px;
-  top: 8px;
+  left: 1px;
+  top: 11px;
   height: 8px;
-  width: 10%;
+  width: 8%;
   background-color: @color-green;
   content: "";
   transform: translateX(10px) rotate(-44deg);
   transform-origin: left bottom;
 }
 
-.form__input[type="checkbox"]:checked+.form__mark::before {
+.form__input[type="checkbox"]:checked + .form__mark::before {
   position: absolute;
-  top: 15px;
-  left: 0;
+  top: 18px;
+  left: 2px;
   height: 2px;
-  width: 62%;
+  width: 61%;
   background-color: @color-green;
   content: "";
   transform: translateX(10px) rotate(-45deg);
@@ -195,11 +228,11 @@
 }
 
 .form__item-checkbox {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .form__item-checkbox:nth-last-child(1) {
-  margin-bottom: 41px;
+  margin-bottom: 39px;
 }
 
 .form__info {
@@ -218,7 +251,7 @@
 }
 
 .form__item:nth-last-child(1) {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 
 .form__item-mobile {
@@ -235,11 +268,6 @@
   position: relative;
 }
 
-.form__item-svg {
-  position: absolute;
-  right: 11px;
-}
-
 .form__field--comment {
   font-family: "Oswald", sans-serif;
   width: 100%;
@@ -249,7 +277,7 @@
   text-transform: uppercase;
   color: @color-dark-grey;
   padding: 9px 12px;
-  margin-bottom: 22px;
+  margin-bottom: 6px;
   border: 1px solid @color-light-grey;
 }
 
@@ -266,6 +294,27 @@
   padding: 21px 0 32px;
 }
 
+.form__input:disabled + .form__radio-mark {
+  opacity: 0.3;
+}
+
+.form__input:disabled ~ .form__label-item {
+  opacity: 0.3;
+}
+
+.form__input:disabled + .form__mark {
+  opacity: 0.3;
+}
+
+.form__input:disabled ~ .form__info {
+  opacity: 0.3;
+}
+
+.form__radio-mark:hover,
+.form__mark:hover {
+  border: 1px solid @color-grey-hover;
+}
+
 @media (min-width: @tablet-width) {
   .form__wrapper {
     padding: 0 70px;
@@ -278,17 +327,17 @@
   }
 
   .form__line-wrapper::before {
-    top: 20%;
+    top: 24%;
   }
 
   .form__title--mod {
     font-size: 60px;
     line-height: 60px;
-    padding: 50px 0 54px;
+    padding: 59px 0 53px;
   }
 
   .form__title--add {
-    padding-bottom: 57px;
+    padding-bottom: 63px;
   }
 
   .form__title--padding {
@@ -302,15 +351,16 @@
   .form__label {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 21px;
   }
 
   .form__fild {
-    padding: 10px;
+    padding: 10px 18px;
     font-size: 20px;
     line-height: 30px;
   }
 
-  .form__input[type="radio"]:checked+.form__radio-mark::before {
+  .form__input[type="radio"]:checked + .form__radio-mark::before {
     top: 10px;
     left: 10px;
     width: 18px;
@@ -321,7 +371,7 @@
     font-size: 20px;
     line-height: 30px;
     width: 323px;
-    padding-bottom: 60px;
+    padding-bottom: 66px;
   }
 
   .form__inner {
@@ -337,7 +387,7 @@
   }
 
   .form__list--radio {
-    padding: 30px 0 0 20px;
+    padding: 31px 0 0 28px;
   }
 
   .form__list--radio::after {
@@ -365,7 +415,9 @@
   .form__field--comment {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 67px;
+    margin-bottom: 62px;
+    height: 174px;
+    padding: 9px 18px;
   }
 
   .form__info {
@@ -378,14 +430,14 @@
     height: 40px;
   }
 
-  .form__input[type="checkbox"]:checked+.form__mark::before {
+  .form__input[type="checkbox"]:checked + .form__mark::before {
     top: 24px;
     left: 7px;
     height: 2px;
     width: 62%;
   }
 
-  .form__input[type="checkbox"]:checked+.form__mark::after {
+  .form__input[type="checkbox"]:checked + .form__mark::after {
     left: 7px;
     top: 12px;
     height: 14px;
@@ -394,8 +446,8 @@
 
   .form__list--additionally {
     display: grid;
-    grid-template-columns: 221px 221px;
-    gap: 0 130px;
+    grid-template-columns: 214px 223px;
+    gap: 0 131px;
   }
 
   .form__label-button {
@@ -408,10 +460,10 @@
 
   .form__button {
     display: grid;
-    grid-template-columns: 282px 180px;
+    grid-template-columns: 283px 180px;
     align-items: center;
     gap: 61px;
-    margin: 10px 0 72px;
+    margin: 14px 0 72px;
   }
 
   .form__button-submit {
@@ -422,12 +474,13 @@
 
   .form__attention {
     padding: 0;
+    font-size: 16px;
   }
 
   .form__title-contact {
     font-size: 36px;
     line-height: 36px;
-    padding: 71px 42px 76px 39px;
+    padding: 78px 42px 76px 39px;
   }
 
   .form__line-title {
@@ -436,11 +489,19 @@
   }
 
   .form__line::before {
-    top: 50%;
+    top: 53%;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form__title--mod {
+    padding: 78px 0 54px;
+  }
+
+  .form__title-contact {
+    padding: 70px 42px 76px 39px;
+  }
+
   .form__wrapper {
     padding: 0 110px;
   }
@@ -475,7 +536,8 @@
 
   .form__button {
     grid-template-columns: 568px 185px;
-    gap: 66px;
+    gap: 80px;
+    margin: 14px 0 82px;
   }
 
   .form__item-mobile,
@@ -485,5 +547,9 @@
 
   .form__line-title {
     margin-left: 70px;
+  }
+
+  .form__item-svg {
+    right: 16px;
   }
 }
