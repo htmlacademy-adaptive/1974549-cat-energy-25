@@ -13,10 +13,9 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
   color: @color-black;
   margin: 0;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 }
 
 .program__text {
@@ -31,7 +30,7 @@
 }
 
 .program__desc {
-  margin-bottom: 22px;
+  margin-bottom: 19px;
 }
 
 .program__desc:nth-last-child(1) {
@@ -45,6 +44,15 @@
 }
 
 
+.program__square {
+  width: 60px;
+  height: 60px;
+  background-color: @color-green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @media (max-width: @mobile-width-only) {
   .program__number {
     display: none;
@@ -56,14 +64,14 @@
   .program__enumeration {
     display: grid;
     grid-template-columns: 247px 249px;
-    gap: 134px 153px;
-    margin-bottom: 104px;
+    gap: 134px 137px;
+    margin-bottom: 103px;
   }
 
   .program__enumeration::after {
     position: absolute;
     right: -29px;
-    bottom: -96px;
+    bottom: -104px;
     left: -29px;
     content: "";
     outline: 1px solid @color-background;
@@ -86,7 +94,7 @@
     font-family: "Oswald", sans-serif;
     font-size: 280px;
     line-height: 280px;
-    left: 120px;
+    left: 115px;
     top: -41px;
     z-index: 0;
     color: @color-grey;
@@ -105,68 +113,26 @@
   .program__title {
     font-size: 60px;
     line-height: 60px;
-    display: flex;
-    padding-bottom: 72px;
+    padding: 18px 0 71px;
   }
 
-  // .program__text--one,
-  // .program__text--two,
-  // .program__text--three,
-  // .program__text--four {
-  //   position: relative;
-  //   z-index: 1;
-  // }
-
-  // .program__one-figure {
-  //   font-family: "Oswald", sans-serif;
-  //   position: absolute;
-  //   font-size: 280px;
-  //   line-height: 280px;
-  //   left: 120px;
-  //   top: 94px;
-  //   z-index: 0;
-  //   color: @color-grey;
-  // }
-
-  // .program__two-figure {
-  //   font-family: "Oswald", sans-serif;
-  //   position: absolute;
-  //   font-size: 280px;
-  //   line-height: 280px;
-  //   right: 71px;
-  //   top: 94px;
-  //   z-index: 0;
-  //   color: @color-grey;
-  // }
-
-  // .program__three-figure {
-  //   font-family: "Oswald", sans-serif;
-  //   position: absolute;
-  //   font-size: 280px;
-  //   line-height: 280px;
-  //   bottom: -78px;
-  //   left: 97px;
-  //   z-index: 0;
-  //   color: @color-grey;
-  // }
-
-  // .program__four-figure {
-  //   font-family: "Oswald", sans-serif;
-  //   position: absolute;
-  //   font-size: 280px;
-  //   line-height: 280px;
-  //   bottom: -78px;
-  //   right: 61px;
-  //   z-index: 0;
-  //   color: @color-grey;
-  // }
+  .program__square {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .program__title {
+    padding: 0;
+    padding-bottom: 71px;
+  }
+
   .program__enumeration {
     display: grid;
-    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-columns: 245px 245px 243px 248px;
     gap: 80px;
+    margin-bottom: 125px;
   }
 
   .program__enumeration::after {

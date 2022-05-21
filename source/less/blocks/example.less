@@ -10,9 +10,11 @@
   text-align: center;
   color: @color-black;
   margin: 0;
-  padding: 25px 0 40px;
+  padding: 27px 21px 40px;
   font-weight: 400;
   display: flex;
+  justify-content: flex-start;
+  background: @color-background;
 }
 
 .example__text {
@@ -24,7 +26,7 @@
 
 .example__fieldset-wrapper {
   display: flex;
-  margin-top: 20px;
+  margin-top: 22px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -84,6 +86,52 @@ legend,
   margin-top: 20px;
 }
 
+.example__slider {
+  padding: 39px 20px;
+  padding-bottom: 45px;
+  background-color: @color-background;
+}
+
+.example__button {
+  font-family: "Oswald", sans-serif;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.example__taggle {
+  position: relative;
+  margin: 4px 0;
+  width: 84px;
+  height: 14px;
+  background-color: @color-white;
+  border: 1px solid @color-special-grey;
+  border-radius: 6px;
+}
+
+.example__taggle-button {
+  display: flex;
+  width: 210px;
+  margin: 0 auto;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example__taggle::before {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  background-color: @color-green;
+  content: "";
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+}
+
 @media (min-width: @tablet-width) {
   .example__wrapper {
     padding: 0 30px;
@@ -93,6 +141,9 @@ legend,
   .example__title {
     font-size: 60px;
     line-height: 60px;
+    padding: 45px 0 64px 30px;
+    background: @color-white;
+    justify-content: flex-start;
   }
 
   .example__info {
@@ -106,13 +157,13 @@ legend,
     text-align: end;
     font-size: 20px;
     line-height: 20px;
+    margin: 9px 0 0;
   }
 
   .example__desc {
     flex-direction: column;
     justify-content: flex-start;
     margin: 0;
-    margin-top: 10px;
   }
 
   .example__text--mod {
@@ -129,8 +180,8 @@ legend,
   .example__text--more {
     font-size: 16px;
     line-height: 24px;
-    width: 662px;
-    padding-bottom: 54px;
+    width: 676px;
+    padding-bottom: 56px;
   }
 
   .example__fieldset {
@@ -139,18 +190,107 @@ legend,
 
   .example__fieldset-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 275px;
+    grid-template-columns: 1fr 1fr 302px;
     margin-top: 0;
+    padding-bottom: 250px;
+  }
+
+  .example__slider {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .example__img {
+    width: 592px;
+    margin-top: -169px;
+  }
+
+  .example__taggle-button {
+    width: 572px;
+    margin-top: 24px;
+    padding-bottom: 60px;
+  }
+
+  .example__taggle {
+    width: 426px;
+    height: 6px;
+    border: none;
+    background: @color-gainsboro;
+  }
+
+  .example__taggle:active::before {
+    border: 1px solid @color-green;
+  }
+
+  // .example__button:hover~.example__taggle:hover::before {
+  //   opacity: 0.3;
+  // }
+  // .example__taggle:hover::before~.example__button--border:hover {
+  //   opacity: 0.3;
+  // }
+
+  .example__taggle::before {
+    top: -13px;
+    left: 47%;
+    width: 34px;
+    height: 34px;
+    background: @color-white;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid @color-gainsboro;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  .example__taggle::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    content: "";
+    border-radius: 5px;
+    background-color: @color-green;
+    cursor: pointer;
+  }
+
+  .example__button {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+  }
+
+  .example__button--border {
+    border-bottom: 2px;
+    border-bottom-style: dotted;
+    border-bottom-color: @color-gainsboro;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .example {
+    display: grid;
+    grid-template-columns: 627px 1fr;
+    align-items: end;
+  }
+
   .example__wrapper {
-    padding: 0 110px;
+    background: @color-background;
+    padding: 0 0 0 110px;
+  }
+
+  .example__taggle-button {
+    padding-bottom: 0;
+  }
+
+  .example__slider {
+    padding-bottom: 72px;
   }
 
   .example__desc {
-    width: 321px;
+    width: 327px;
     justify-content: space-between;
     flex-direction: row;
   }
@@ -158,10 +298,14 @@ legend,
   .example__text--more {
     width: 436px;
     display: inline-block;
+    padding-bottom: 70px;
+    padding-top: 77px;
   }
 
   .example__title {
-    padding: 0 0 76px;
+    padding: 0;
+    padding-bottom: 76px;
+    padding-left: 112px;
   }
 
   .example__text--mod {
@@ -172,7 +316,12 @@ legend,
     display: grid;
     grid-template-columns: 162px 162px;
     justify-content: start;
-    gap: 52px 42px;
-    margin-bottom: 75px;
+    gap: 47px 43px;
+    margin-bottom: 0;
+    padding-bottom: 75px;
+  }
+
+  .example__img {
+    margin-top: -176px;
   }
 }

@@ -1,10 +1,26 @@
 .nutrition__wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
-.nutrition {
-  width: 280px;
-  margin: 0 auto;
+.nutrition__inner {
+  display: flex;
+  flex-direction: column;
+  background-color: @color-green;
+}
+
+.nutrition__cat-img {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+}
+
+.nutrition__banner {
+  z-index: 2;
 }
 
 .nutrition__title {
@@ -12,9 +28,11 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
-  padding-bottom: 25px;
+  padding: 27px 0 25px;
+  color: @color-white;
+  z-index: 2;
 }
 
 .nutrition__slogan {
@@ -24,6 +42,9 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  color: @color-white;
+  z-index: 2;
+  padding-bottom: 33px;
 }
 
 .nutrition__link {
@@ -32,44 +53,117 @@
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 11px 73px;
+  padding: 11px;
+  text-align: center;
   background: @color-green;
   color: @color-white;
+  display: inline-block;
+  order: 1;
+  width: 280px;
 }
 
 @media (min-width: @tablet-width) {
   .nutrition__wrapper {
     display: flex;
     align-items: flex-start;
-    width: 450px;
     flex-direction: column;
-    margin-left: 90px;
+    padding: 0;
+    margin-bottom: 0;
+    background-image: none;
+  }
+
+  .nutrition__inner {
+    margin-left: 119px;
+    background-color: @color-white;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .nutrition__cat-img {
+    display: none;
   }
 
   .nutrition__slogan {
     font-size: 20px;
     line-height: 20px;
+    color: @color-black;
+    padding-bottom: 49px;
+    text-align: left;
   }
 
   .nutrition__title {
     font-size: 60px;
     line-height: 60px;
     text-align: left;
+    color: @color-black;
+    padding: 59px 0 41px;
+    width: 416px;
   }
 
   .nutrition__link {
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 26px;
+    padding: 17px;
+    order: 0;
+    width: 244px;
+    position: relative;
+    z-index: 2;
+    margin-left: 120px;
   }
 
-  .nutrition {
+  .nutrition__banner {
+    padding: 0;
+    margin-top: 0;
+    order: 2;
+    margin-bottom: -85px;
+    position: static;
+  }
+
+  .nutrition__img {
+    position: relative;
+    right: -29px;
+    top: -85px;
+    z-index: 1;
     width: 709px;
+    display: block;
   }
 }
 
+
 @media (min-width: @desktop-width) {
-  .nutrition {
-    width: 1220px;
+  .nutrition__title {
+    padding: 113px 0 38px;
+  }
+
+  .nutrition__slogan {
+    padding-bottom: 51px;
+  }
+
+  .nutrition__link {
+    margin-left: 190px;
+  }
+
+  .nutrition__img {
+    position: absolute;
+    width: 552px;
+    right: 329px;
+    top: 31px;
+  }
+
+  .nutrition__wrapper {
+    margin-bottom: 352px;
+  }
+
+  .nutrition__inner {
+    margin-left: 190px;
+  }
+
+  .nutrition__cat-img {
+    display: inline;
+    width: 720px;
+    min-height: 696px;
+    left: 721px;
+    top: -115px;
+    background-color: @color-green;
   }
 }
