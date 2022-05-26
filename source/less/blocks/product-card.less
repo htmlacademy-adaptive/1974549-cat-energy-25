@@ -1,12 +1,13 @@
 .product__title {
   position: relative;
-  margin: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: @color-black;
-  padding: 32px 0 28px;
+  padding: 32px 0 40px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .product-card__subtitle {
@@ -19,7 +20,7 @@
   color: @color-grey-2;
   margin: 0;
   width: 76px;
-  padding: 34px 0 13px;
+  padding: 18px 0 11px;
 }
 
 .product-card__list {
@@ -44,30 +45,38 @@
   color: @color-dark-grey;
 }
 
-.product-card__wrapper {
+.product-card__inner {
   display: grid;
   position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.product-card__wrapper {
+  border: 1px solid @color-background;
 }
 
 .product__img {
   position: absolute;
   left: 36px;
-  bottom: 70px;
+  bottom: 86px;
 }
 
 .product__img-big {
   position: absolute;
   left: 28px;
-  bottom: 65px;
+  bottom: 81px;
 }
 
 .product__img--mod {
-  bottom: 77px;
+  bottom: 92px;
 }
 
-.product-card__wrapper-more {
+.product-card__inner-more {
   display: grid;
   position: relative;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .product-card__link {
@@ -93,7 +102,7 @@
 .product-card__button-all::after {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 16px;
   width: 30px;
   height: 2px;
@@ -103,7 +112,7 @@
 .product-card__button-all::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 34px;
   left: 16px;
   width: 30px;
   height: 2px;
@@ -113,16 +122,7 @@
 
 .product-card__button {
   position: relative;
-  margin-bottom: 12px;
-}
-
-.product-card__button::after {
-  position: absolute;
-  outline: 1px solid @color-background;
-  content: "";
-  right: -19px;
-  left: -19px;
-  bottom: -21px;
+  margin-bottom: 28px;
 }
 
 .product-card__title {
@@ -130,7 +130,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  padding: 91px 0 8px;
+  padding: 77px 0 8px;
   text-align: center;
   margin: 0;
   text-transform: uppercase;
@@ -159,15 +159,6 @@
   margin-bottom: 25px;
 }
 
-.product-card__button-more::after {
-  position: absolute;
-  border: 1px solid @color-background;
-  content: "";
-  right: -20px;
-  left: -20px;
-  bottom: -23px;
-}
-
 .product-card__button-more:hover {
   background: @color-background;
 }
@@ -182,12 +173,20 @@
     grid-template-columns: 324px 324px;
     gap: 140px 60px;
     justify-items: center;
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .product-card__wrapper {
+    border: none;
   }
 
   .product__title {
     font-size: 60px;
     line-height: 60px;
     padding: 60px 0 161px;
+    width: 708px;
+    margin: 0 auto;
   }
 
   .product-card__link {
@@ -234,9 +233,10 @@
     margin-bottom: 0;
   }
 
-  .product-card__wrapper {
+  .product-card__inner {
     background: @color-grey;
     padding: 160px 38px 41px;
+    width: 324px;
   }
 
   .product-card__title {
@@ -244,10 +244,10 @@
     font-size: 20px;
     line-height: 22px;
     padding: 0;
-    padding-bottom: 18px;
+    padding-bottom: 23px;
   }
 
-  .product-card__wrapper-more {
+  .product-card__inner-more {
     padding: 162px 38px 36px;
     justify-items: center;
     align-items: center;
@@ -259,7 +259,7 @@
     font-size: 16px;
     line-height: 18px;
     width: 167px;
-    padding-bottom: 80px;
+    padding-bottom: 87px;
   }
 
   .product-card__button-more {
@@ -305,7 +305,8 @@
 
 @media (min-width: @desktop-width) {
   .product__title {
-    padding: 77px 0 166px;
+    padding: 77px 0 162px;
+    width: 1220px;
   }
 
   .product-card {
@@ -313,10 +314,12 @@
     grid-template-columns: 245px 245px 245px 245px;
     gap: 143px 80px;
     justify-items: center;
+    width: 1220px;
   }
 
-  .product-card__wrapper {
-    padding: 160px 33px 40px;
+  .product-card__inner {
+    padding: 160px 36px 41px;
+    width: 245px;
   }
 
   .product-card__link {
@@ -327,9 +330,9 @@
     width: 165px;
   }
 
-  .product-card__wrapper-more {
+  .product-card__inner-more {
     width: auto;
-    padding: 153px 38px 36px;
+    padding: 160px 38px 41px;
   }
 
   .product-card__button-more {

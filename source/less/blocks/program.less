@@ -6,6 +6,8 @@
 
 .program__container {
   position: relative;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .program__title {
@@ -61,6 +63,14 @@
 
 
 @media (min-width: @tablet-width) {
+  .program {
+    position: relative;
+  }
+
+  .program__container {
+    width: 708px;
+  }
+
   .program__enumeration {
     display: grid;
     grid-template-columns: 247px 249px;
@@ -68,11 +78,10 @@
     margin-bottom: 103px;
   }
 
-  .program__enumeration::after {
+  .program::after {
     position: absolute;
-    right: -29px;
     bottom: -104px;
-    left: -29px;
+    width: 100%;
     content: "";
     outline: 1px solid @color-background;
   }
@@ -123,6 +132,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .program__container {
+    width: 1220px;
+  }
+
   .program__title {
     padding: 0;
     padding-bottom: 71px;
@@ -135,7 +148,7 @@
     margin-bottom: 125px;
   }
 
-  .program__enumeration::after {
+  .program::after {
     display: none;
   }
 }

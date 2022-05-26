@@ -222,11 +222,12 @@
     <section class="nutrition">
       <div class="nutrition__wrapper nutrition__wrapper--img">
         <div class="nutrition__inner">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/bg-cat-desktop.jpg, img/bg-cat-desktop@2x.jpg 2x"><img
-              class="nutrition__cat-img" width="320" height="302" src="img/bg-cat-mobile.jpg"
-              srcset="img/bg-cat-mobile-@2x.jpg 2x" alt="Фон с изоборажением кота.">
-          </picture>
+          <div class="nutrition__background-image">
+            <picture>
+              <img class="nutrition__cat-img" width="320" height="302" src="img/bg-cat-mobile.jpg"
+                srcset="img/bg-cat-mobile-@2x.jpg 2x" alt="Фон с изоборажением кота.">
+            </picture>
+          </div>
           <h2 class="nutrition__title">Функциональное питание для котов</h2>
           <p class="nutrition__slogan">Занялся собой? Займись котом!</p>
         </div>
@@ -454,51 +455,59 @@
       </section>
     </div>
     <section class="example">
-      <div>
-        <h2 class="example__title">Живой пример</h2>
+      <h2 class="example__title">Живой пример</h2>
+      <div class="example__container-color">
         <div class="example__wrapper">
-          <p class="example__text example__text--more">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив
-            свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом
-            он&nbsp;не&nbsp;менял своих привычек&nbsp;и по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
-          <div class="example__fieldset-wrapper">
-            <fieldset class="example__fieldset">
-              <legend class="example__text example__text--mod example__text--newmod">снижение веса</legend>
-              <span class="example__info">5 КГ</span>
-            </fieldset>
-            <fieldset class="example__fieldset">
-              <legend class="example__text example__text--mod">затрачено времени</legend>
-              <span class="example__info">60 ДНЕЙ</span>
-            </fieldset>
-            <div class="example__desc">
-              <p class="example__waste">Затраты на питание:</p>
-              <span class="example__waste example__waste--price">&nbsp;15 000 РУБ.</span>
+          <div class="example__container">
+            <p class="example__text example__text--more">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив
+              свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом
+              он&nbsp;не&nbsp;менял своих привычек&nbsp;и по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
+            <div class="example__fieldset-wrapper">
+              <fieldset class="example__fieldset">
+                <legend class="example__text example__text--mod example__text--newmod">снижение веса</legend>
+                <span class="example__info">5 КГ</span>
+              </fieldset>
+              <fieldset class="example__fieldset">
+                <legend class="example__text example__text--mod">затрачено времени</legend>
+                <span class="example__info">60 ДНЕЙ</span>
+              </fieldset>
+              <div class="example__desc">
+                <p class="example__waste">Затраты на питание:</p>
+                <span class="example__waste example__waste--price">&nbsp;15 000 РУБ.</span>
+              </div>
+            </div>
+          </div>
+          <div class="example__slider">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png, img/cat-slider-tablet@2x.png 2x">
+              <img class="example__img" src="img/cat-slider.png" width="280" height="232"
+                srcset="img/cat-slider@2x.png 2x" alt="Фото кота.">
+            </picture>
+            <div class="example__taggle-button">
+              <button class="example__button example__button--border" type="button">Было</button>
+              <span class="example__taggle"></span>
+              <button class="example__button example__button--border" type="button">Стало</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="example__slider">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png, img/cat-slider-tablet@2x.png 2x"><img
-            class="example__img" src="img/cat-slider.png" width="280" height="232" srcset="img/cat-slider@2x.png 2x"
-            alt="Фото кота."></picture>
-        <div class="example__taggle-button"><button class="example__button example__button--border"
-            type="button">Было</button> <span class="example__taggle"></span> <button
-            class="example__button example__button--border" type="button">Стало</button></div>
-      </div>
     </section>
     <section class="location">
       <h2 class="visually-hidden">Местоположение</h2>
-      <div class="location__inner">
-        <p class="location__text">приглашаем к&nbsp;сотрудничеству дилеров!</p>
-        <div>
-          <address class="location__link location__link--mod">ул. Большая Конюшенная, д. 19/8</address>
-          <address class="location__link">Санкт-Петербург</address>
+      <div class="location__wrapper">
+        <div class="location__inner">
+          <p class="location__text">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <div>
+            <address class="location__link location__link--mod">ул. Большая Конюшенная, д. 19/8</address>
+            <address class="location__link">Санкт-Петербург</address>
+          </div>
         </div>
       </div>
       <iframe class="location__iframe"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3973863279616!2d30.324935674167147!3d59.93714175906648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1649771068060!5m2!1sru!2sru"
         width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </section>
   </main>
   <footer class="footer">
