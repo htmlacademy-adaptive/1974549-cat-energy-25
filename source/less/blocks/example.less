@@ -1,6 +1,10 @@
-.example__wrapper {
+.example {
   background: @color-background;
-  padding: 0 20px;
+}
+
+.example__container {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .example__title {
@@ -8,13 +12,12 @@
   font-size: 36px;
   line-height: 40px;
   text-align: center;
-  color: @color-black;
-  margin: 0;
-  padding: 27px 21px 40px;
+  padding: 27px 0 40px;
   font-weight: 400;
   display: flex;
+  width: 280px;
+  margin: 0 auto;
   justify-content: flex-start;
-  background: @color-background;
 }
 
 .example__text {
@@ -87,9 +90,10 @@ legend,
 }
 
 .example__slider {
-  padding: 39px 20px;
-  padding-bottom: 45px;
+  padding: 37px 0 45px;
   background-color: @color-background;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .example__button {
@@ -133,17 +137,25 @@ legend,
 }
 
 @media (min-width: @tablet-width) {
+  .example {
+    background-color: @color-white;
+  }
+
+  .example__container {
+    width: 708px;
+  }
+
   .example__wrapper {
-    padding: 0 30px;
     background: @color-white;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
-    padding: 45px 0 64px 30px;
+    padding: 45px 0 64px;
     background: @color-white;
     justify-content: flex-start;
+    width: 708px;
   }
 
   .example__info {
@@ -200,6 +212,7 @@ legend,
     padding: 0;
     flex-direction: column;
     align-items: center;
+    width: auto;
   }
 
   .example__img {
@@ -223,13 +236,6 @@ legend,
   .example__taggle:active::before {
     border: 1px solid @color-green;
   }
-
-  // .example__button:hover~.example__taggle:hover::before {
-  //   opacity: 0.3;
-  // }
-  // .example__taggle:hover::before~.example__button--border:hover {
-  //   opacity: 0.3;
-  // }
 
   .example__taggle::before {
     top: -13px;
@@ -270,15 +276,19 @@ legend,
 }
 
 @media (min-width: @desktop-width) {
-  .example {
-    display: grid;
-    grid-template-columns: 627px 1fr;
-    align-items: end;
+  .example__container-color {
+    background: @color-background;
+  }
+
+  .example__container {
+    width: 628px;
   }
 
   .example__wrapper {
     background: @color-background;
-    padding: 0 0 0 110px;
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
   }
 
   .example__taggle-button {
@@ -303,9 +313,8 @@ legend,
   }
 
   .example__title {
-    padding: 0;
-    padding-bottom: 76px;
-    padding-left: 112px;
+    padding: 0 0 76px;
+    width: 1220px;
   }
 
   .example__text--mod {
