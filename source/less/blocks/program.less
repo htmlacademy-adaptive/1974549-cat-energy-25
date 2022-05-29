@@ -11,7 +11,7 @@
 }
 
 .program__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -100,7 +100,7 @@
 
   .program__number {
     position: absolute;
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 280px;
     line-height: 280px;
     left: 115px;
@@ -128,6 +128,7 @@
   .program__square {
     width: 80px;
     height: 80px;
+    z-index: 3;
   }
 }
 
@@ -136,9 +137,15 @@
     width: 1220px;
   }
 
+  .program__desc--useful {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .program__title {
-    padding: 0;
-    padding-bottom: 71px;
+    padding: 0 0 75px;
   }
 
   .program__enumeration {
