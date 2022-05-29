@@ -1,5 +1,5 @@
 .form__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   color: @color-black;
@@ -23,7 +23,7 @@
 .form__title--mod {
   font-size: 36px;
   line-height: 36px;
-  padding: 30px 0 38px;
+  padding: 30px 0 40px;
 }
 
 .form__title--padding {
@@ -50,7 +50,7 @@
 
 .form__title-contact {
   position: relative;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   color: @color-black;
@@ -80,7 +80,7 @@
 }
 
 .form__text {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -118,8 +118,12 @@
   margin-bottom: 23px;
 }
 
+.form__input:focus + .form__radio-mark {
+  outline: 1px solid @color-grey-hover;
+}
+
 .form__label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -128,7 +132,7 @@
 }
 
 .form__label-item {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -136,7 +140,7 @@
 }
 
 .form__fild {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -161,6 +165,18 @@
 .form__fild:invalid,
 .form__item-svg:invalid {
   outline: 2px solid @color-error;
+}
+
+:-moz-input-placeholder {
+  /* Firefox 18- */
+  color: @color-dark-grey;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: @color-dark-grey;
+  opacity: 1;
 }
 
 .form__item-svg {
@@ -246,6 +262,10 @@
   transform-origin: left bottom;
 }
 
+.form__input:focus + .form__mark {
+  outline: 1px solid @color-grey-hover;
+}
+
 .form__item-checkbox {
   margin-bottom: 22px;
 }
@@ -255,7 +275,7 @@
 }
 
 .form__info {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   align-items: center;
@@ -288,7 +308,7 @@
 }
 
 .form__field--comment {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   width: 100%;
   resize: none;
   font-size: 16px;
@@ -408,10 +428,6 @@
     padding-bottom: 66px;
   }
 
-  .form__inner {
-    margin: 0 70px;
-  }
-
   .form__item {
     margin: 0 0 20px;
   }
@@ -423,7 +439,7 @@
   .form__radio-wrapper {
     width: 630px;
     margin: 0 auto;
-    border: 1px solid #e7e7e7;
+    border: 1px solid @color-light-grey;
   }
 
   .form__list--radio {
@@ -577,7 +593,7 @@
   }
 
   .form__item:nth-last-child(1) {
-    margin-bottom: 0;
+    margin-bottom: 2px;
   }
 
   .form__radio:nth-last-child(1) {
@@ -590,8 +606,8 @@
 
   .form__list--additionally {
     display: grid;
-    grid-template-columns: 221px 221px 221px 149px;
-    gap: 104px;
+    grid-template-columns: 221px 221px 221px 221px;
+    gap: 0 104px;
     width: 1220px;
   }
 

@@ -74,11 +74,11 @@ const createWebp = () => {
 
 //SVG
 
-const svg = () => {
-  return gulp.src('source/img/*.svg')
-    .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
-}
+const svg = () =>
+  gulp.src(['source/img/**/*.svg', '!source/img/sprite.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img')
+  );
 
 //Copy
 
@@ -86,6 +86,7 @@ const copy = (done) => {
   return gulp.src([
       'source/fonts/*.{woff2,woff}',
       'source/*.ico',
+      'source/img/sprite.svg'
     ], {
       base: 'source'
     })
@@ -125,7 +126,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
